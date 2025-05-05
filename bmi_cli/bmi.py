@@ -3,25 +3,18 @@ cwb371 - Wolfgang de Groot
 CSE 4283 - Software Testing - Assignment 2
 """
 
-class BMI:
-    value: float
-    inches: int
-    lbs: float
+categories = (
+    "Underweight",
+    "Normal weight",
+    "Overweight",
+    "Obese"
+)
 
-    categories = (
-        "Underweight",
-        "Normal weight",
-        "Overweight",
-        "Obese"
-    )
+def imperial_to_bmi(feet: int, inches: int, weights: float) -> float:
+    return NotImplementedError
 
-    def __init__(self, feet: int, inches: int, lbs: float):
-        self.inches = (feet * 12) + inches
-        self.lbs = lbs
-        self.value = None
+def metric_to_bmi(height: float, weight: float) -> float:
+    return NotImplementedError
 
-    def imperial_to_bmi(feet: int, inches: int, lbs: float) -> float:
-        return NotImplementedError
-
-    def categorize_bmi(bmi: float) -> str:
-        return NotImplementedError
+def categorize_bmi(bmi: float) -> str:
+    return NotImplementedError
