@@ -8,6 +8,13 @@ class BMI:
     inches: int
     lbs: float
 
+    categories = (
+        "Underweight",
+        "Normal weight",
+        "Overweight",
+        "Obese"
+    )
+
     def __init__(self, feet: int, inches: int, lbs: float):
         self.inches = (feet * 12) + inches
         self.lbs = lbs
