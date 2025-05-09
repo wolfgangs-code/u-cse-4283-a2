@@ -22,4 +22,13 @@ def metric_to_bmi(height: float, weight: float) -> float:
     return weight / squared_height
 
 def categorize_bmi(bmi: float) -> str:
-    return NotImplementedError
+    if bmi < 0:
+        raise ValueError("BMI must be a positive value.")
+    if bmi < 18.5:
+        return categories[0]
+    elif 18.5 <= bmi <= 24.9:
+        return categories[1]
+    elif 25 <= bmi <= 29.9:
+        return categories[2]
+    else:
+        return categories[3]
