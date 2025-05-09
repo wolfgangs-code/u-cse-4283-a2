@@ -16,8 +16,8 @@ def main():
         category = categorize_bmi(bmi).lower()
 
         # Display results
-        print(f"Your BMI is {bmi:.2f}.")
-        print(f"You are considered to be {category}.")
+        print(f"\nYour BMI is {bmi:.2f}.")
+        print(f"You are considered to be {category}.\n")
     except ValueError:
         print("Invalid input. Please enter numeric values for weight and height.")
     except ZeroDivisionError:
