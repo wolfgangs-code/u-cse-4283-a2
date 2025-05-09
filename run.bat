@@ -7,3 +7,4 @@ if %errorlevel% neq 0 (
 )
 
 python -u bmi_cli/cli.py %*
+pause
